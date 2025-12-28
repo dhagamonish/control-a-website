@@ -17,7 +17,10 @@ const Creatives = () => {
                                 </div>
                             </div>
                         </div>
-                        <p className="card-caption">Booking flow</p>
+                        <div className="card-text">
+                            <h4 className="card-caption">Booking flow</h4>
+                            <p className="card-desc">Streamlined scheduling that eliminates phone tag.</p>
+                        </div>
                     </div>
 
                     {/* Card 2 */}
@@ -32,7 +35,10 @@ const Creatives = () => {
                                 </div>
                             </div>
                         </div>
-                        <p className="card-caption">Internal dashboard</p>
+                        <div className="card-text">
+                            <h4 className="card-caption">Internal dashboard</h4>
+                            <p className="card-desc">One source of truth for your entire team.</p>
+                        </div>
                     </div>
 
                     {/* Card 3 */}
@@ -41,7 +47,10 @@ const Creatives = () => {
                             <div className="puzzle-piece p1"></div>
                             <div className="puzzle-piece p2"></div>
                         </div>
-                        <p className="card-caption">Automation logic</p>
+                        <div className="card-text">
+                            <h4 className="card-caption">Automation logic</h4>
+                            <p className="card-desc">Custom workflows that handle the heavy lifting.</p>
+                        </div>
                     </div>
 
                     {/* Card 4 */}
@@ -55,7 +64,10 @@ const Creatives = () => {
                                 </div>
                             </div>
                         </div>
-                        <p className="card-caption">Live status</p>
+                        <div className="card-text">
+                            <h4 className="card-caption">Live status</h4>
+                            <p className="card-desc">So owners always know what’s happening without checking.</p>
+                        </div>
                     </div>
                 </div>
             </div>

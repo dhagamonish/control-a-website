@@ -44,3 +44,11 @@
 .btn-final-cta:hover {
     transform: scale(1.05);
 }
+
+.cta-microcopy-white {
+    font-size: 14px;
+    opacity: 0.6;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 24px;
+}

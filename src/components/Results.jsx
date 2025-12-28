@@ -30,12 +30,12 @@ const Results = () => {
                             <div className="case-comparison">
                                 <div className="case-state">
                                     <span className="state-label">BEFORE</span>
-                                    <p>Manual tracking, missed calls, chaotic admin.</p>
+                                    <p>Lost leads, manual tracking, and chaotic admin overhead.</p>
                                 </div>
                                 <div className="case-divider">→</div>
                                 <div className="case-state">
                                     <span className="state-label">AFTER</span>
-                                    <p>Automated bookings, zero data entry, calm.</p>
+                                    <p>Automated bookings, zero data entry, and a calm, scalable operation.</p>
                                 </div>
                             </div>
 

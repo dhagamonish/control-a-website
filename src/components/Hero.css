@@ -1,39 +1,35 @@
 .hero-section {
     padding: 20px;
+    padding-top: 120px;
+    /* Minimized gap for a tighter look with the 220px logo */
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background: #fff;
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
-    /* Ensure it acts as anchor for absolute children */
 }
 
 .hero-card {
     background-color: var(--primary-green);
     /* Green Card */
     width: 90%;
-    /* Reduced from 100% */
     max-width: 1400px;
-    /* Reduced from 1600px */
-    height: 85vh;
-    /* Reduced from 90vh */
-    min-height: 700px;
+    height: calc(100vh - 220px);
+    /* Fill remaining viewport minus space */
+    min-height: 600px;
     border-radius: 60px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* KEY CHANGE: Use padding top to reserve space for logo, centered in remaining space */
     justify-content: center;
-    padding-top: 100px;
-    /* Reduced top padding as logo is outside now */
     box-sizing: border-box;
-    color: #fff;
-    /* White Text */
+    color: #000;
+    /* Locked to black */
     box-shadow: 0 40px 100px rgba(158, 255, 0, 0.2);
 }
 
@@ -53,12 +49,15 @@
 .hero-top-info {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
+
+    /* Variable width: 100% at top, 90% when scrolled */
+    width: calc(100% - (var(--scroll-progress) * 10%));
+    left: calc(var(--scroll-progress) * 5%);
+
+    height: 140px;
+    /* Reduced height from 240px to be less thick */
     z-index: 1000;
     pointer-events: none;
-    /* Let clicks pass through empty areas */
 
     /* Gradient Background appearing on scroll */
     background: linear-gradient(to bottom,
@@ -66,13 +65,16 @@
             rgba(255, 255, 255, calc(var(--scroll-progress) * 0.8)) 80%,
             rgba(255, 255, 255, 0));
     backdrop-filter: blur(calc(var(--scroll-progress) * 8px));
+
+    /* Elegant rounded bottom on scroll */
+    border-bottom-left-radius: calc(var(--scroll-progress) * 40px);
+    border-bottom-right-radius: calc(var(--scroll-progress) * 40px);
 }
 
 .brand-logo-img {
     display: block;
     position: absolute;
     top: 50%;
-    /* Vertically center in the 120px container */
 
     /* 
        Interpolation Logic:
@@ -82,37 +84,16 @@
     left: calc(50% - (var(--scroll-progress) * (50% - 40px)));
     transform: translate(calc(-50% + (var(--scroll-progress) * 50%)), -50%);
 
-    /* Height: 150px -> 60px */
-    height: calc(150px - (var(--scroll-progress) * 90px));
+    /* Ultra-large height at 220px as requested */
+    height: 220px;
 
     border-radius: 8px;
-    will-change: left, transform, height;
+    will-change: left, transform;
     transition: none;
-    /* Driven by scroll variable */
     pointer-events: auto;
-    /* Make logo interactive */
 }
 
 
-.hero-card {
-    background-color: var(--primary-green);
-    /* Green Card */
-    width: 90%;
-    max-width: 1400px;
-    height: 85vh;
-    min-height: 700px;
-    border-radius: 60px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 100px;
-    box-sizing: border-box;
-    color: #000;
-    /* Black Text requested */
-    box-shadow: 0 40px 100px rgba(158, 255, 0, 0.2);
-}
 
 .hero-content {
     text-align: center;
@@ -171,11 +152,26 @@
     /* Explicitly Black */
 }
 
+.hero-ctas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 48px;
+}
+
 .hero-ctas {
     display: flex;
     gap: 16px;
     justify-content: center;
     align-items: center;
+}
+
+.cta-microcopy {
+    font-size: 14px;
+    opacity: 0.6;
+    font-weight: 500;
+    color: #000;
 }
 
 /* Buttons */

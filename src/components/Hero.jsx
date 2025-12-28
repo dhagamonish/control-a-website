@@ -50,16 +50,19 @@ const Hero = () => {
                     </h1>
 
                     <p className="hero-subtext">
-                        We build simple operational systems that handle bookings, calls, and internal workflows — quietly in the background.
+                        We design and automate booking, calling, and internal workflows for service businesses — so operations run quietly in the background.
                     </p>
 
-                    <div className="hero-ctas">
-                        <button className="btn-primary-green">
-                            Get started
-                        </button>
-                        <button className="btn-secondary-ghost">
-                            See how it works
-                        </button>
+                    <div className="hero-ctas-container">
+                        <div className="hero-ctas">
+                            <button className="btn-primary-green">
+                                Book a clarity call
+                            </button>
+                            <button className="btn-secondary-ghost">
+                                See real examples
+                            </button>
+                        </div>
+                        <p className="cta-microcopy">15-minute call. No sales pressure. We map your workflow.</p>
                     </div>
                 </div>
 

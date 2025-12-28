@@ -8,9 +8,10 @@ const Contact = () => {
             <div className="container">
                 <div className="final-cta-box">
                     <div className="final-cta-content">
-                        <h2 className="cta-headline">Start with clarity.</h2>
-                        <p className="cta-subtext">Tell us how your business works. We’ll take it from there.</p>
-                        <button className="btn-final-cta">Get Started</button>
+                        <h2 className="cta-headline">Let’s simplify how your business runs.</h2>
+                        <p className="cta-subtext">Tell us how things work today. We’ll design a calm, automated system around it.</p>
+                        <button className="btn-final-cta">Book a clarity call</button>
+                        <p className="cta-microcopy-white">Free. 15 minutes. Clear next steps.</p>
                     </div>
                 </div>
             </div>
