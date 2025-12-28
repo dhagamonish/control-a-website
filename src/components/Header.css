@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 48px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    color: var(--text-main);
+    /* Black on Green */
+}
+
+.header-left,
+.header-right {
+    flex: 1;
+}
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo-text {
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    font-family: 'Inter', sans-serif;
+}
+
+.phone-number,
+.icon {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+}

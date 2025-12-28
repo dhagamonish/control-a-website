@@ -1,0 +1,46 @@
+.contact-section {
+    padding-bottom: 80px;
+}
+
+.final-cta-box {
+    background: #111;
+    /* Dark Neutral */
+    border-radius: 40px;
+    padding: 80px 40px;
+    text-align: center;
+    color: #fff;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cta-headline {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.cta-subtext {
+    font-size: 20px;
+    opacity: 0.7;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-final-cta {
+    background: var(--primary-green);
+    color: #000;
+    padding: 16px 40px;
+    border-radius: 100px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-final-cta:hover {
+    transform: scale(1.05);
+}
