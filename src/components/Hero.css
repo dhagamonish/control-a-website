@@ -50,9 +50,9 @@
     position: fixed;
     top: 0;
 
-    /* Variable width: 100% at top, 90% when scrolled */
-    width: calc(100% - (var(--scroll-progress) * 10%));
-    left: calc(var(--scroll-progress) * 5%);
+    /* Variable width: 100% at top, 80% when scrolled (Significantly narrower) */
+    width: calc(100% - (var(--scroll-progress) * 20%));
+    left: calc(var(--scroll-progress) * 10%);
 
     height: 140px;
     /* Reduced height from 240px to be less thick */
@@ -79,9 +79,9 @@
     /* 
        Interpolation Logic:
        Start (0): left 50%, translateX -50% (Center)
-       End (1): left 40px, translateX 0% (Left Aligned)
+       End (1): left 20px, translateX 0% (Extreme Left)
     */
-    left: calc(50% - (var(--scroll-progress) * (50% - 40px)));
+    left: calc(50% - (var(--scroll-progress) * (50% - 20px)));
     transform: translate(calc(-50% + (var(--scroll-progress) * 50%)), -50%);
 
     /* Ultra-large height at 220px as requested */
@@ -129,16 +129,16 @@
 }
 
 .hero-headline {
-    font-size: 96px;
-    line-height: 0.9;
-    font-weight: 800;
-    text-transform: uppercase;
+    font-size: 56px;
+    line-height: 1.1;
+    font-weight: 500;
     margin-bottom: 32px;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -0.02em;
-    white-space: nowrap;
     color: #000;
-    /* Explicitly Black */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-subtext {

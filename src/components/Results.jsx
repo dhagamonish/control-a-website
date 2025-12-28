@@ -8,7 +8,7 @@ const Results = () => {
             <div className="container">
                 <div className="results-card-large">
                     <div className="results-header">
-                        <h2>WE TAKE PRIDE IN<br />OUR CLIENTS' PEACE.</h2>
+                        <h2>What changes after the system is in place</h2>
                     </div>
 
                     <div className="result-showcase">
@@ -25,23 +25,20 @@ const Results = () => {
 
                         {/* Copy */}
                         <div className="showcase-metrics">
-                            <span className="case-industry">Industry: Local Service Business</span>
-
                             <div className="case-comparison">
                                 <div className="case-state">
                                     <span className="state-label">BEFORE</span>
-                                    <p>Lost leads, manual tracking, and chaotic admin overhead.</p>
+                                    <p>Manual tracking, missed calls, unclear handoffs, daily stress.</p>
                                 </div>
                                 <div className="case-divider">→</div>
                                 <div className="case-state">
                                     <span className="state-label">AFTER</span>
-                                    <p>Automated bookings, zero data entry, and a calm, scalable operation.</p>
+                                    <p>Bookings run automatically. Tasks move forward without reminders. Fewer interruptions. Clear visibility.</p>
                                 </div>
                             </div>
 
-                            <div className="metric-tags">
-                                <span className="tag">Reduced manual work by 70%</span>
-                                <span className="tag">Clearer daily operations</span>
+                            <div className="metric-tags" style={{ marginTop: '24px', fontStyle: 'italic', opacity: 0.8 }}>
+                                Most clients notice the difference within the first week.
                             </div>
                         </div>
                     </div>

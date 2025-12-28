@@ -6,6 +6,11 @@ const Creatives = () => {
     return (
         <section className="creatives-section">
             <div className="container">
+                {/* New Section Title */}
+                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', letterSpacing: '-0.02em' }}>What we usually build</h2>
+                </div>
+
                 <div className="creatives-grid">
                     {/* Card 1 */}
                     <div className="creative-card card-1">
@@ -19,7 +24,7 @@ const Creatives = () => {
                         </div>
                         <div className="card-text">
                             <h4 className="card-caption">Booking flow</h4>
-                            <p className="card-desc">Streamlined scheduling that eliminates phone tag.</p>
+                            <p className="card-desc">Customers book, reschedule, or cancel without back and forth. You get confirmed appointments without manual coordination.</p>
                         </div>
                     </div>
 
@@ -37,7 +42,7 @@ const Creatives = () => {
                         </div>
                         <div className="card-text">
                             <h4 className="card-caption">Internal dashboard</h4>
-                            <p className="card-desc">One source of truth for your entire team.</p>
+                            <p className="card-desc">A simple view of what is happening today, what needs attention, and what is already handled.</p>
                         </div>
                     </div>
 
@@ -49,7 +54,7 @@ const Creatives = () => {
                         </div>
                         <div className="card-text">
                             <h4 className="card-caption">Automation logic</h4>
-                            <p className="card-desc">Custom workflows that handle the heavy lifting.</p>
+                            <p className="card-desc">Clear rules that decide what happens next so work does not pause waiting for instructions.</p>
                         </div>
                     </div>
 
@@ -66,7 +71,7 @@ const Creatives = () => {
                         </div>
                         <div className="card-text">
                             <h4 className="card-caption">Live status</h4>
-                            <p className="card-desc">So owners always know what’s happening without checking.</p>
+                            <p className="card-desc">You can check progress at any time without calling or messaging your team.</p>
                         </div>
                     </div>
                 </div>

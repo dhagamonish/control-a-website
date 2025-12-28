@@ -46,11 +46,11 @@ const Hero = () => {
                 <div className="hero-content">
                     {/* Main Text */}
                     <h1 className="hero-headline">
-                        CALM BUSINESSES<br />RUN BETTER.
+                        Designed for businesses that want control,<br />not complexity.
                     </h1>
 
                     <p className="hero-subtext">
-                        We design and automate booking, calling, and internal workflows for service businesses — so operations run quietly in the background.
+                        We design and set up simple systems that handle bookings, calls, updates, and internal tasks so your day runs smoothly even when you are not watching everything.
                     </p>
 
                     <div className="hero-ctas-container">
@@ -58,11 +58,8 @@ const Hero = () => {
                             <button className="btn-primary-green">
                                 Book a clarity call
                             </button>
-                            <button className="btn-secondary-ghost">
-                                See real examples
-                            </button>
                         </div>
-                        <p className="cta-microcopy">15-minute call. No sales pressure. We map your workflow.</p>
+                        <p className="cta-microcopy">A short conversation to understand how your business runs today and where things get stuck.</p>
                     </div>
                 </div>
 
