@@ -22,7 +22,6 @@ const BookingPage = ({ onClose }) => {
             <div className="booking-content-wrapper">
                 {/* SECTION 1: CONTEXT SETTING */}
                 <section className="booking-section-green">
-                    <div className="hero-grid-lines"></div>
                     <div className="booking-hero-content">
                         <h1 className="hero-headline">A calm, practical conversation.</h1>
                         <p className="hero-subtext">
@@ -77,7 +76,6 @@ const BookingPage = ({ onClose }) => {
 
                 {/* SECTION 3: GREEN CARD QUESTIONS, FORM & SCHEDULING */}
                 <section className="booking-section-green questions-card">
-                    <div className="hero-grid-lines"></div>
                     <div className="booking-card-content">
                         <div className="question-grid">
 
