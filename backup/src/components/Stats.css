@@ -1,0 +1,35 @@
+.stats-section {
+    padding: var(--space-64) var(--container-padding) var(--space-96);
+    background: var(--bg-light);
+    transition: var(--transition-smooth);
+    border-radius: var(--card-radius);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.stats-section:hover {
+    background: var(--hover-bg);
+}
+
+.trust-setup-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.trust-statement {
+    font-size: var(--font-h2);
+    line-height: 1.2;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.trust-highlight {
+    color: var(--text-muted);
+}
+
+@media (max-width: 600px) {
+    .trust-statement {
+        font-size: var(--font-h2);
+    }
+}

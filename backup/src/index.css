@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
+
+:root {
+  /* Colors */
+  --primary-green: #9EFF00;
+  --bg-light: #FFFFFF;
+  --bg-grey: #F5F5F7;
+  --text-main: #000000;
+  --text-muted: rgba(0, 0, 0, 0.6);
+  --text-light: #FFFFFF;
+
+  /* Spacing Scale */
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-64: 64px;
+  --space-96: 96px;
+  --space-128: 128px;
+
+  /* Layout */
+  --max-width: 1120px;
+  --container-padding: 32px;
+  --card-radius: 32px;
+
+  /* Typography Scale */
+  --font-hero: 82px;
+  --font-h2: 48px;
+  --font-h3: 24px;
+  --font-body: 18px;
+  --font-meta: 14px;
+
+  /* Interaction */
+  --transition-smooth: all 0.2s ease-out;
+  --hover-bg: rgba(158, 255, 0, 0.05);
+  /* Subtle brand tint */
+}
+
+@media (max-width: 600px) {
+  :root {
+    --container-padding: 24px;
+    --font-hero: 42px;
+    --font-h2: 32px;
+    --font-h3: 20px;
+    --font-body: 16px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.section-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  width: 100%;
+}
+
+.section-spacing {
+  padding-top: var(--space-96);
+  padding-bottom: var(--space-96);
+}
+
+.major-break {
+  padding-top: var(--space-128);
+  padding-bottom: var(--space-128);
+}
+
+/* Typography Utilities */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.body-text {
+  font-size: var(--font-body);
+  color: var(--text-muted);
+  max-width: 640px;
+}
+
+.meta-text {
+  font-size: var(--font-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Shared Card System */
+.ui-card {
+  background: var(--bg-grey);
+  border-radius: var(--card-radius);
+  padding: var(--space-32);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: var(--transition-smooth);
+}
+
+.ui-card:hover {
+  background: var(--bg-light);
+  border-color: var(--primary-green);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  transform: translateY(-4px);
+}
+
+/* Button System */
+.btn-primary {
+  background: var(--text-main);
+  color: var(--text-light);
+  padding: var(--space-16) var(--space-32);
+  border-radius: 100px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #222;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-green);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  opacity: 0.8;
+}
+
+/* tactile button compression */
+.btn-primary:active,
+.btn-hero:active {
+  transform: scale(0.96);
+  transition: transform 0.1s ease;
+}
+
+@media (max-width: 1024px) {
+  .custom-cursor {
+    display: none;
+  }
+}

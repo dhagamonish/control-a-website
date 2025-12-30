@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');
+/* Removed Comfortaa as per user request for "this style everywhere" */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+/* Import Montserrat Full Weights */
 /* Import Montserrat */
 @import "@fontsource/geist-sans";
 /* Import Geist Sans */
@@ -17,8 +18,16 @@
   --text-light: #FFFFFF;
   --border-radius-lg: 48px;
   --border-radius-md: 24px;
-  --border-radius-sm: 12px;
-  --spacing-container: 120px;
+  /* --border-radius-sm: 12px; REMOVED - INVALID 12PX */
+
+  /* STRICT Spacing System (8, 16, 24, 32, 48, 64, 96) */
+  --spacing-96: 96px;
+  --spacing-64: 64px;
+  --spacing-48: 48px;
+  --spacing-32: 32px;
+  --spacing-24: 24px;
+  --spacing-16: 16px;
+  --spacing-8: 8px;
 }
 
 * {
@@ -28,16 +37,30 @@
 }
 
 body {
-  font-family: 'Comfortaa', cursive, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  /* Global switch to Montserrat */
   background-color: var(--bg-light);
   color: var(--text-main);
   -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  /* Default weight */
 }
 
-.container {
+/* Hard Reset Section Contract */
+section {
+  padding-top: var(--spacing-96);
+  padding-bottom: var(--spacing-96);
+  width: 100%;
+}
+
+.container,
+.section-inner {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
 }
 
 /* Utilities */
@@ -45,10 +68,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.section-spacing {
-  margin-bottom: var(--spacing-container);
 }
 
 /* Smooth Scrolling */

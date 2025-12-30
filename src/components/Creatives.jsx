@@ -7,7 +7,7 @@ const Creatives = () => {
         <section className="creatives-section">
             <div className="container">
                 {/* New Section Title */}
-                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                <div className="creatives-header">
                     <h2 style={{ fontSize: '42px', fontWeight: '700', letterSpacing: '-0.02em' }}>What we usually build</h2>
                 </div>
 

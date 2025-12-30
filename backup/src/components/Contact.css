@@ -1,0 +1,18 @@
+.final-cta-box {
+    background: var(--text-main);
+    padding: var(--space-96) var(--space-64);
+    text-align: center;
+    border-radius: var(--card-radius);
+    border: none;
+}
+
+.final-cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .final-cta-box {
+        padding: var(--space-64) var(--space-24);
+    }
+}

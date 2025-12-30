@@ -1,0 +1,143 @@
+.creatives-section {
+    transition: var(--transition-smooth);
+    border-radius: var(--card-radius);
+    padding: var(--space-64) var(--container-padding);
+}
+
+.creatives-section:hover {
+    background: var(--hover-bg);
+}
+
+.section-header-centered {
+    text-align: left;
+    margin-bottom: var(--space-64);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+}
+
+.creatives-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-32);
+}
+
+.card-vis-container {
+    height: 180px;
+    background: var(--bg-light);
+    border-radius: var(--space-16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-24);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.abstract-visual {
+    position: relative;
+}
+
+/* Simplified Visuals */
+.clock-face {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    position: relative;
+}
+
+.hand {
+    position: absolute;
+    background: #000;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: bottom center;
+}
+
+.h-hour {
+    width: 3px;
+    height: 18px;
+    transform: rotate(45deg);
+}
+
+.h-min {
+    width: 2px;
+    height: 24px;
+    transform: rotate(180deg);
+}
+
+.ui-mockup {
+    width: 80px;
+    height: 100px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ui-row {
+    height: 6px;
+    background: #eee;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.ui-btn {
+    height: 14px;
+    background: var(--primary-green);
+    border-radius: 4px;
+    margin-top: auto;
+}
+
+.logic-viz .puzzle-piece {
+    width: 40px;
+    height: 40px;
+    background: #000;
+    border-radius: 8px;
+    position: absolute;
+}
+
+.p1 {
+    left: -25px;
+    top: -20px;
+}
+
+.p2 {
+    left: -5px;
+    top: 0;
+    background: var(--primary-green) !important;
+}
+
+.dark-dash {
+    width: 120px;
+    height: 80px;
+    background: #000;
+    border-radius: 8px;
+    display: flex;
+}
+
+.dash-sidebar {
+    width: 30px;
+    border-right: 1px solid #333;
+}
+
+.dash-main {
+    flex: 1;
+    padding: 12px;
+}
+
+.dash-stat {
+    width: 40px;
+    height: 20px;
+    border-radius: 4px;
+    background: var(--primary-green);
+}
+
+@media (max-width: 900px) {
+    .creatives-grid {
+        grid-template-columns: 1fr;
+    }
+}

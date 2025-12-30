@@ -1,0 +1,47 @@
+.global-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 70px;
+    z-index: 3000;
+    pointer-events: none;
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0.9) 70%,
+            rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(8px);
+}
+
+.brand-logo-img {
+    display: block;
+    position: absolute;
+    top: 35px;
+    /* Calculated to align with the 1120px grid edge on scroll */
+    /* Container left edge is (100% - 1120px) / 2 + 32px padding */
+    left: calc(50% - (var(--scroll-progress) * (50% - (max(32px, (100vw - var(--max-width)) / 2) + 32px))));
+    transform: translate(-50%, -50%);
+    height: 120px;
+    /* Standardized size */
+    will-change: left;
+    pointer-events: auto;
+}
+
+@media (max-width: 900px) {
+    .brand-logo-img {
+        height: 100px;
+        left: calc(50% - (var(--scroll-progress) * (50% - 40px)));
+    }
+}
+
+@media (max-width: 600px) {
+    .global-navbar {
+        height: 55px;
+    }
+
+    .brand-logo-img {
+        height: 70px;
+        top: 27.5px;
+        left: calc(50% - (var(--scroll-progress) * (50% - 32px)));
+    }
+}

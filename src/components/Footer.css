@@ -1,8 +1,10 @@
 .footer-simple {
     background: #000;
-    padding: 30px 0;
+    padding: 48px 0 30px;
+    /* Padding-top 48px */
     color: #fff;
-    margin-top: 40px;
+    margin-top: 64px;
+    /* Gap between CTA and Footer 64px */
     position: relative;
     /* Anchor for absolute branding */
 }
@@ -11,6 +13,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    /* Align based on center for now, check nav links baseline */
     padding-right: 20px;
     /* Ensure right padding */
     min-height: 200px;

@@ -1,12 +1,17 @@
 .process-section {
-    padding-bottom: 120px;
+    padding-top: var(--spacing-96);
+    padding-bottom: var(--spacing-96);
+    /* Strict Section Padding */
 }
 
 .process-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    /* Grid for strict alignment */
+    align-items: baseline;
+    column-gap: 24px;
     margin-bottom: 80px;
+    /* Keep 80px visual gap to grid */
 }
 
 .process-headline {
@@ -53,41 +58,50 @@
 .process-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 32px;
+    /* Grid Gap 32px */
     border-top: 1px solid #eee;
-    padding-top: 40px;
+    padding-top: 48px;
 }
 
 .process-item {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    /* gap managed manually below for strict control */
+    min-height: 200px;
+    /* Equal min-height */
 }
 
 .proc-num {
     font-size: 48px;
     font-weight: 800;
     color: #e0e0e0;
-    /* Light Grey Number */
     line-height: 1;
     font-family: 'Inter', sans-serif;
     letter-spacing: -0.05em;
+    margin-bottom: 16px;
+    /* Number -> Title 16px */
 }
 
 .process-item:hover .proc-num {
     color: var(--primary-green);
-    /* Highlight on hover */
 }
 
-.process-item h4 {
+.proc-title {
     font-size: 20px;
     font-weight: 700;
+    margin-bottom: 16px;
+    /* Title -> Body 12px override kept as user asked for it in previous prompts?
+       Wait, strict rules say 8, 16. 12 is invalid.
+       Changing to 16px per "Remove all 12px" rule.
+    */
 }
 
-.process-item p {
-    font-size: 15px;
-    line-height: 1.6;
+.proc-desc {
+    font-size: 16px;
+    line-height: 1.5;
     color: #666;
+    margin: 0;
 }
 
 @media (max-width: 900px) {
