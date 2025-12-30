@@ -1,12 +1,11 @@
 .hero-section {
     padding: 20px;
-    padding-top: 120px;
-    /* Minimized gap for a tighter look with the 220px logo */
-    width: 100%;
-    min-height: 100vh;
+    padding-top: 110px;
+    /* Tight framing for the 140px logo */
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    min-height: 100vh;
     background: #fff;
     box-sizing: border-box;
     overflow: hidden;
@@ -16,140 +15,71 @@
 .hero-card {
     background-color: var(--primary-green);
     /* Green Card */
-    width: 90%;
-    max-width: 1400px;
-    height: calc(100vh - 220px);
-    /* Fill remaining viewport minus space */
+    width: 85%;
+    max-width: 1200px;
+    height: auto;
+    /* Allow it to grow with content */
     min-height: 600px;
     border-radius: 60px;
     position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    box-sizing: border-box;
-    color: #000;
-    /* Locked to black */
-    box-shadow: 0 40px 100px rgba(158, 255, 0, 0.2);
+    align-items: center;
+    /* Center content */
+    flex-direction: column;
+    padding: 100px 20px;
+    box-shadow: 0 40px 100px rgba(158, 255, 0, 0.3);
+    overflow: hidden;
 }
 
-.hero-content {
-    text-align: center;
-    z-index: 10;
-    max-width: 800px;
-    position: relative;
-    /* Removed margin-top, utilizing parent padding */
-}
-
-/* Nav Bar / Logo Container */
-/* Nav Bar / Logo Container */
-/* Nav Bar / Logo Container */
-/* Nav Bar / Logo Container */
-/* Nav Bar / Logo Container */
-.hero-top-info {
-    position: fixed;
-    top: 0;
-
-    /* Variable width: 100% at top, 80% when scrolled (Significantly narrower) */
-    width: calc(100% - (var(--scroll-progress) * 20%));
-    left: calc(var(--scroll-progress) * 10%);
-
-    height: 140px;
-    /* Reduced height from 240px to be less thick */
-    z-index: 1000;
-    pointer-events: none;
-
-    /* Gradient Background appearing on scroll */
-    background: linear-gradient(to bottom,
-            rgba(255, 255, 255, calc(var(--scroll-progress) * 0.95)),
-            rgba(255, 255, 255, calc(var(--scroll-progress) * 0.8)) 80%,
-            rgba(255, 255, 255, 0));
-    backdrop-filter: blur(calc(var(--scroll-progress) * 8px));
-
-    /* Elegant rounded bottom on scroll */
-    border-bottom-left-radius: calc(var(--scroll-progress) * 40px);
-    border-bottom-right-radius: calc(var(--scroll-progress) * 40px);
-}
-
-.brand-logo-img {
-    display: block;
-    position: absolute;
-    top: 50%;
-
-    /* 
-       Interpolation Logic:
-       Start (0): left 50%, translateX -50% (Center)
-       End (1): left 20px, translateX 0% (Extreme Left)
-    */
-    left: calc(50% - (var(--scroll-progress) * (50% - 20px)));
-    transform: translate(calc(-50% + (var(--scroll-progress) * 50%)), -50%);
-
-    /* Ultra-large height at 220px as requested */
-    height: 220px;
-
-    border-radius: 8px;
-    will-change: left, transform;
-    transition: none;
-    pointer-events: auto;
-}
-
-
-
-.hero-content {
-    text-align: center;
-    z-index: 10;
-    max-width: 800px;
-    position: relative;
-}
-
-.logo-text .plus {
-    color: #fff;
-}
-
-/* Grid Lines */
+/* Updated Grid Lines - Subtle & Premium */
 .hero-grid-lines {
     position: absolute;
     inset: 0;
     pointer-events: none;
     opacity: 1;
-    /* 3x3 Grid using CSS Gradients - BOLD WHITE LINES */
+    /* Visible but subtle */
     background-size: 33.33% 33.33%;
-    /* 100% / 3 = ~33.33% */
     background-image:
         linear-gradient(to right, rgba(255, 255, 255, 0.4) 2px, transparent 2px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 2px, transparent 2px);
-
     mask-image: radial-gradient(circle at center, black 40%, transparent 85%);
     -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 85%);
 }
 
-.grid-v,
-.grid-h {
-    display: none;
+.hero-content {
+    text-align: center;
+    z-index: 10;
+    max-width: 900px;
+    margin-top: -40px;
+    /* Pull content slightly up for balance */
+    padding: 0 20px;
 }
 
 .hero-headline {
-    font-size: 56px;
-    line-height: 1.1;
+    font-size: 82px;
+    line-height: 1;
     font-weight: 500;
-    margin-bottom: 32px;
+    /* Medium weight for sleek look */
+    margin-bottom: 24px;
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
     color: #000;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+}
+
+.hero-headline span {
+    display: block;
 }
 
 .hero-subtext {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
-    max-width: 580px;
-    margin: 0 auto 56px;
+    max-width: 640px;
+    margin: 0 auto 48px;
     font-weight: 500;
     opacity: 0.8;
     color: #000;
-    /* Explicitly Black */
 }
 
 .hero-ctas-container {
@@ -157,42 +87,35 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    margin-top: 48px;
+    /* Space between main CTA and secondary */
 }
 
 .hero-ctas {
     display: flex;
-    gap: 16px;
     justify-content: center;
-    align-items: center;
+    gap: 16px;
 }
 
-.cta-microcopy {
-    font-size: 14px;
-    opacity: 0.6;
-    font-weight: 500;
-    color: #000;
-}
-
-/* Buttons */
 .btn-primary-green {
     background-color: #000;
+    /* Black button on green bg */
     color: #fff;
-    height: 56px;
-    padding: 0 32px;
+    /* White text */
+    height: 64px;
+    padding: 0 48px;
     border-radius: 100px;
     border: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary-green:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-    background-color: #333;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    background-color: #111;
 }
 
 .btn-secondary-ghost {
@@ -299,23 +222,73 @@
     .hero-card {
         width: 95%;
         height: auto;
-        padding: 100px 20px;
-        padding-top: 140px;
+        padding: 80px 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-headline {
+        font-size: 48px;
     }
 
-    .icon-google {
-        left: 2%;
+    .float-icon {
         width: 80px;
         height: 80px;
     }
+}
 
-    .icon-fb {
-        right: 2%;
-        width: 80px;
-        height: 80px;
+@media (max-width: 600px) {
+    .hero-section {
+        padding-top: 80px;
+        /* Adjusted for 55px navbar + 80px logo overlap */
     }
 
-    .hero-content {
-        margin-top: 0;
+    .hero-headline {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+
+    .hero-subtext {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .hero-card {
+        width: 100%;
+        border-radius: 40px;
+        padding: 60px 20px;
+    }
+
+    /* Hide floating icons on small screens or make them smaller */
+    .float-icon {
+        width: 60px;
+        height: 60px;
+        opacity: 0.8;
+    }
+
+    .icon-tl {
+        top: 15%;
+        left: 5%;
+    }
+
+    .icon-tr {
+        top: 18%;
+        right: 5%;
+    }
+
+    .icon-bl {
+        bottom: 15%;
+        left: 5%;
+    }
+
+    .icon-br {
+        bottom: 18%;
+        right: 5%;
+    }
+
+    .btn-primary-green {
+        width: 100%;
+        height: 56px;
+        font-size: 16px;
     }
 }

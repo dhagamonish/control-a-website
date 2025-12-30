@@ -1,25 +1,79 @@
 .footer-simple {
     background: #000;
-    padding: 60px 0;
+    padding: 30px 0;
     color: #fff;
     margin-top: 40px;
+    position: relative;
+    /* Anchor for absolute branding */
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    padding-right: 20px;
+    /* Ensure right padding */
+    min-height: 200px;
+    /* Ensure height for logo */
 }
 
 .footer-brand {
-    font-size: 20px;
-    font-weight: 700;
+    position: absolute;
+    /* Perfectly matches the Navbar logo center point (140px) */
+    left: 140px;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
 }
 
+@media (max-width: 900px) {
+    .footer-brand {
+        left: 80px;
+    }
+
+    .footer-logo-img {
+        height: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-simple {
+        padding: 40px 0 20px;
+        /* More top padding */
+    }
+
+    .footer-content {
+        justify-content: center;
+        /* Center links on mobile */
+        align-items: flex-end;
+        /* Align to bottom */
+        padding-bottom: 20px;
+        min-height: 180px;
+    }
+
+    .footer-brand {
+        left: 50%;
+        /* Center logo on mobile */
+        top: 40%;
+        /* Move up */
+        transform: translate(-50%, -50%);
+    }
+
+    .footer-logo-img {
+        height: 100px;
+    }
+
+    .footer-links {
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
 .footer-logo-img {
-    height: 48px;
+    height: 200px;
+    /* Flagship brand presence */
     filter: invert(1);
     /* Invert colors for dark mode footer */
 }

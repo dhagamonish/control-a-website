@@ -2,12 +2,15 @@
 import React from 'react';
 import './Process.css';
 
-const Process = () => {
+const Process = ({ onBook }) => {
     return (
         <section className="process-section section-spacing">
             <div className="container">
                 <div className="process-header">
                     <h3 className="process-headline">How we improve day to day operations</h3>
+                    <div className="process-ctas">
+                        <button className="btn-pill-green" onClick={onBook}>Book a clarity call</button>
+                    </div>
                 </div>
 
                 <div className="process-grid">

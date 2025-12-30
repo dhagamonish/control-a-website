@@ -1,0 +1,72 @@
+.global-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+
+    /* Reduced vertical height */
+    height: 70px;
+    z-index: 3000;
+    pointer-events: none;
+
+    /* Fixed White Gradient Background */
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.98),
+            rgba(255, 255, 255, 0.85) 80%,
+            rgba(255, 255, 255, 0.2) 90%,
+            rgba(255, 255, 255, 0));
+    backdrop-filter: blur(12px);
+
+    /* Clean look with no borders or shadows */
+    border: none;
+    box-shadow: none;
+}
+
+.brand-logo-img {
+    display: block;
+    position: absolute;
+
+    /* Vertically centered inside the 70px bar */
+    top: 35px;
+
+    /* 
+       Slow Sliding Logic:
+       Initial: Center (50%)
+       Final: Left (120px)
+    */
+    left: calc(50% - (var(--scroll-progress) * (50% - 120px)));
+
+    /* Centering transform */
+    transform: translate(-50%, -50%);
+
+    /* 
+       Bold Logo Size (Reduced for sleeker feel):
+       Now 140px high.
+    */
+    height: 140px;
+
+    border-radius: 8px;
+    will-change: left;
+    transition: none;
+    pointer-events: auto;
+}
+
+@media (max-width: 900px) {
+    .brand-logo-img {
+        height: 110px;
+        top: 35px;
+        left: calc(50% - (var(--scroll-progress) * (50% - 80px)));
+    }
+}
+
+@media (max-width: 600px) {
+    .global-navbar {
+        height: 55px;
+    }
+
+    .brand-logo-img {
+        height: 80px;
+        top: 27.5px;
+        left: calc(50% - (var(--scroll-progress) * (50% - 50px)));
+    }
+}

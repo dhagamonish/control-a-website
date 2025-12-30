@@ -2,7 +2,7 @@
 import React from 'react';
 import './Pricing.css';
 
-const Pricing = () => {
+const Pricing = ({ onBook }) => {
     return (
         <section className="pricing-section">
             <div className="container">
@@ -19,7 +19,7 @@ const Pricing = () => {
                         <h3 className="p-cost">Basic Setup</h3>
                         <p className="p-desc">For small teams replacing manual tracking and basic follow ups.</p>
                         <p className="p-best-for">Best when operations are simple but time consuming.</p>
-                        <button className="btn-p-outline">Book a clarity call</button>
+                        <button className="btn-p-outline" onClick={onBook}>Book a clarity call</button>
                     </div>
 
                     {/* Growth */}
@@ -28,7 +28,7 @@ const Pricing = () => {
                         <h3 className="p-cost">End-to-End</h3>
                         <p className="p-desc">For businesses that handle daily volume and need reliable systems end to end.</p>
                         <p className="p-best-for">Best when consistency and speed matter.</p>
-                        <button className="btn-p-fill">Book a clarity call</button>
+                        <button className="btn-p-fill" onClick={onBook}>Book a clarity call</button>
                     </div>
 
                     {/* Scale */}
@@ -37,7 +37,7 @@ const Pricing = () => {
                         <h3 className="p-cost">Custom</h3>
                         <p className="p-desc">For high volume operations with custom workflows and integrations.</p>
                         <p className="p-best-for">Best when systems must adapt without breaking.</p>
-                        <button className="btn-p-outline">Book a clarity call</button>
+                        <button className="btn-p-outline" onClick={onBook}>Book a clarity call</button>
                     </div>
                 </div>
 

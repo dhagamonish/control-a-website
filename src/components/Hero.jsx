@@ -1,40 +1,10 @@
-import React, { useState, useEffect } from 'react';
+
+import React from 'react';
 import './Hero.css';
 
-const Hero = () => {
-    const [scrollProgress, setScrollProgress] = useState(0);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollTotal = window.innerHeight * 0.8; // Animate over 80% of hero height
-            let progress = window.scrollY / scrollTotal;
-
-            // Clamp progress between 0 and 1
-            if (progress < 0) progress = 0;
-            if (progress > 1) progress = 1;
-
-            setScrollProgress(progress);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        // Initial call
-        handleScroll();
-
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
+const Hero = ({ onBook }) => {
     return (
         <section className="hero-section">
-            {/* Logo / Nav Bar Container with Progress Variable */}
-            <div
-                className="hero-top-info"
-                style={{
-                    '--scroll-progress': scrollProgress
-                }}
-            >
-                <img src="/logo.png" alt="control + a" className="brand-logo-img" />
-            </div>
-
             <div className="hero-card">
                 <div className="hero-grid-lines">
                     <div className="grid-v v1"></div>
@@ -55,7 +25,7 @@ const Hero = () => {
 
                     <div className="hero-ctas-container">
                         <div className="hero-ctas">
-                            <button className="btn-primary-green">
+                            <button className="btn-primary-green" onClick={onBook}>
                                 Book a clarity call
                             </button>
                         </div>
